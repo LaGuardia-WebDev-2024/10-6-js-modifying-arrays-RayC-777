@@ -1,5 +1,5 @@
-var xPositions = [100];
-var yPositions = [200];
+var xPositions = [100, 50];
+var yPositions = [200, 100];
 
 setup = function() {
   size(400, 400); 
@@ -18,6 +18,13 @@ var drawStars = function() {
     for (var i = 0; i < yPositions.length; i++) {
         text("⭐", xPositions[i], yPositions[i]);
     }
+
+    if(mousePressed){
+  xPositions.push(100);
+  yPositions.push(200);
+}
+
+
 };
 
 
